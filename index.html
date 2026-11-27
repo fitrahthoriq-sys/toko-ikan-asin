@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pak Shodikin – Ikan Asin &amp; Terasi, Pesan Online</title>
+<meta name="description" content="Ikan asin kering pilihan, higienis dan siap kirim. Pesan lewat keranjang belanja.">
+<style>
+:root{--bg:#f7f3ea;--surface:#fff;--ink:#16303a;--muted:#5d727a;--brand:#0f5c73;--brand-ink:#fff;--accent:#e8a33d;--line:#e2dccb;--hero:#102a43;--hero-ink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a20;--surface:#16262e;--ink:#eaf1f3;--muted:#9fb3ba;--brand:#4fb5d0;--brand-ink:#07202a;--accent:#f0b552;--line:#25404b;--hero:#0a1a26;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1a20;--surface:#16262e;--ink:#eaf1f3;--muted:#9fb3ba;--brand:#4fb5d0;--brand-ink:#07202a;--accent:#f0b552;--line:#25404b;--hero:#0a1a26;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--hero);color:var(--hero-ink);display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:12px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hero);z-index:21}
+.logo{font-weight:800;letter-spacing:.5px;text-decoration:none;color:inherit}
+.logo b{color:var(--accent)}
+nav{display:flex;gap:16px;align-items:center;font-size:14px}
+nav a{color:inherit;text-decoration:none;opacity:.9}
+.cartlink{background:var(--accent);color:#1b1b1b;border-radius:999px;padding:6px 14px;font-weight:700;opacity:1}
+@media(max-width:560px){nav .hide{display:none}}
+.hero{background:var(--hero);color:var(--hero-ink);padding:56px 20px 72px;text-align:center}
+.hero small{letter-spacing:3px;color:var(--accent);font-weight:700}
+.hero h1{font-size:clamp(28px,6vw,46px);margin:12px auto;max-width:720px;line-height:1.15}
+.hero p{max-width:560px;margin:0 auto 24px;opacity:.85}
+.btn{display:inline-block;background:var(--accent);color:#1b1b1b;border:0;border-radius:10px;padding:12px 22px;font:700 16px inherit;font-family:inherit;cursor:pointer;text-decoration:none}
+.btn.alt{background:var(--brand);color:var(--brand-ink)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;max-width:960px;margin:-40px auto 0;padding:0 20px}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.feat h3{margin:6px 0 2px;font-size:16px}.feat p{margin:0;color:var(--muted);font-size:14px}
+section{max-width:960px;margin:0 auto;padding:48px 20px 0}
+.eyebrow{color:var(--brand);font-weight:700;letter-spacing:2px;font-size:12px}
+h2{margin:4px 0 8px;font-size:28px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+input,textarea,select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+.tools input{flex:1 1 220px;width:auto}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;font:inherit}
+.chip[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:96px;display:grid;place-items:center;font-size:44px;background:linear-gradient(135deg,var(--brand),var(--hero))}
+.cb{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cb h3{margin:0;font-size:17px}.cb p{margin:0;color:var(--muted);font-size:14px;flex:1}
+.price{font-weight:800;color:var(--brand)}.price span{font-weight:400;color:var(--muted);font-size:13px}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:20px;cursor:pointer}
+.qty output{min-width:24px;text-align:center;font-weight:700}
+.empty{color:var(--muted);padding:24px 0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.total{font-size:20px;font-weight:800;border:0;padding-top:14px}
+form{display:grid;gap:12px;margin-top:16px}
+label{font-size:14px;font-weight:600;display:grid;gap:4px}
+.err{color:#c0392b;font-size:14px;min-height:20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+footer{margin-top:56px;background:var(--hero);color:var(--hero-ink);padding:28px 20px;text-align:center;font-size:14px;opacity:.95}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#beranda">PAK <b>SHODIKIN</b></a>
+  <nav><a class="hide" href="#produk">Produk</a><a class="hide" href="#cara">Cara Pesan</a><a class="hide" href="#tentang">Tentang</a><a class="cartlink" href="#pesan">🛒 <span id="badge">0</span></a></nav>
+</header>
+
+<main id="beranda">
+<div class="hero">
+  <small>KERING • GURIH • HIGIENIS</small>
+  <h1>Ikan Asin Pilihan, Langsung ke Dapur Anda</h1>
+  <p>Dijemur bersih, dikemas rapi, dan siap kirim. Pilih produk, masukkan ke keranjang, lalu kirim pesanan lewat WhatsApp.</p>
+  <a class="btn" href="#produk">Lihat Produk →</a>
+</div>
+
+<div class="feats">
+  <div class="feat">🌞<h3>Dijemur Alami</h3><p>Proses pengeringan bersih dan terkontrol.</p></div>
+  <div class="feat">📦<h3>Kemasan Rapat</h3><p>Aman untuk dikirim dan tahan lama.</p></div>
+  <div class="feat">💬<h3>Pesan Mudah</h3><p>Keranjang belanja, konfirmasi lewat WhatsApp.</p></div>
+</div>
+
+<section id="produk">
+  <div class="eyebrow">KATALOG</div>
+  <h2>Produk Kami</h2>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Cari ikan asin…" aria-label="Cari produk">
+    <div class="chips" id="chips"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="none" hidden>Produk tidak ditemukan.</div>
+</section>
+
+<section id="pesan">
+  <div class="eyebrow">KERANJANG</div>
+  <h2>Pesanan Anda</h2>
+  <div class="two">
+    <div class="panel">
+      <div id="items"></div>
+      <div class="row total"><span>Total</span><span id="total">Rp0</span></div>
+      <p style="color:var(--muted);font-size:13px;margin:8px 0 0">Ongkos kirim dikonfirmasi penjual lewat WhatsApp.</p>
+    </div>
+    <div class="panel">
+      <b>Data Pemesan</b>
+      <form id="f" novalidate>
+        <label>Nama<input id="nama" autocomplete="name" placeholder="Nama lengkap"></label>
+        <label>Nomor HP<input id="hp" type="tel" autocomplete="tel" placeholder="08xxxxxxxxxx"></label>
+        <label>Alamat pengiriman<textarea id="alamat" rows="3" placeholder="Alamat lengkap"></textarea></label>
+        <label>Catatan (opsional)<input id="cat" placeholder="Contoh: dikemas per 250 g"></label>
+        <div class="err" id="err" role="alert"></div>
+        <a class="btn alt" id="kirim" href="#pesan" target="_blank" rel="noopener">Kirim Pesanan via WhatsApp</a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="cara">
+  <div class="eyebrow">LANGKAH</div>
+  <h2>Cara Pesan</h2>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div class="panel"><b>1. Pilih produk</b><p style="margin:4px 0 0;color:var(--muted)">Tekan tombol + pada produk yang Anda mau.</p></div>
+    <div class="panel"><b>2. Isi data</b><p style="margin:4px 0 0;color:var(--muted)">Lengkapi nama, nomor HP, dan alamat.</p></div>
+    <div class="panel"><b>3. Kirim</b><p style="margin:4px 0 0;color:var(--muted)">Pesanan terkirim ke WhatsApp penjual untuk konfirmasi.</p></div>
+  </div>
+</section>
+
+<section id="tentang">
+  <div class="eyebrow">TENTANG KAMI</div>
+  <h2>Usaha Keluarga, Rasa Terjaga</h2>
+  <p style="color:var(--muted);max-width:640px">Kami menjual ikan asin kering dengan proses yang menjaga kebersihan dan rasa. Hubungi kami lewat WhatsApp untuk pesanan dalam jumlah besar atau pertanyaan seputar produk.</p>
+</section>
+</main>
+
+<footer>© 2026 Pak Shodikin • Pemesanan lewat WhatsApp</footer>
+
+<script>
+(function(){
+  // Ganti nomor WhatsApp penjual (format internasional tanpa +, contoh 6281234567890)
+  var WA="6288888888888";
+  var P=[
+    {id:1,n:"Ikan Teri Nasi",c:"Teri",e:"🐟",u:"250 g",p:35000,d:"Kecil, renyah, cocok untuk campuran nasi dan sambal."},
+    {id:2,n:"Teri Medan",c:"Teri",e:"🐠",u:"250 g",p:45000,d:"Ukuran sedang, gurih dan tidak terlalu asin."},
+    {id:3,n:"Ikan Peda",c:"Ikan",e:"🐟",u:"500 g",p:40000,d:"Ikan kembung peda dengan aroma khas."},
+    {id:4,n:"Jambal Roti",c:"Ikan",e:"🐡",u:"250 g",p:55000,d:"Daging tebal, cocok digoreng atau disambal."},
+    {id:5,n:"Ikan Asin Kakap",c:"Ikan",e:"🐟",u:"500 g",p:65000,d:"Ikan kakap kering berdaging tebal."},
+    {id:6,n:"Cumi Asin",c:"Lainnya",e:"🦑",u:"250 g",p:70000,d:"Cumi kering dengan tekstur kenyal."},
+    {id:7,n:"Udang Rebon Kering",c:"Lainnya",e:"🦐",u:"250 g",p:50000,d:"Cocok untuk sambal dan bumbu masakan."},
+    {id:8,n:"Terasi Udang",c:"Lainnya",e:"🟤",u:"200 g",p:30000,d:"Terasi pekat aroma kuat untuk sambal."}
+  ];
+  var cart={},cat="Semua",$=function(i){return document.getElementById(i)};
+  try{var s=localStorage.getItem("ikan-cart");if(s)cart=JSON.parse(s)||{}}catch(e){cart={}}
+  function rp(n){return "Rp"+n.toLocaleString("id-ID")}
+  function save(){try{localStorage.setItem("ikan-cart",JSON.stringify(cart))}catch(e){}}
+  function esc(t){return String(t).replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+  function chips(){
+    var cs=["Semua"].concat(P.map(function(x){return x.c}).filter(function(v,i,a){return a.indexOf(v)===i}));
+    $("chips").innerHTML=cs.map(function(c){return '<button class="chip" aria-pressed="'+(c===cat)+'" data-c="'+c+'">'+c+'</button>'}).join("");
+  }
+  function grid(){
+    var q=$("q").value.trim().toLowerCase();
+    var l=P.filter(function(x){return (cat==="Semua"||x.c===cat)&&(x.n+" "+x.d).toLowerCase().indexOf(q)>-1});
+    $("none").hidden=l.length>0;
+    $("grid").innerHTML=l.map(function(x){var n=cart[x.id]||0;
+      return '<div class="card"><div class="thumb" aria-hidden="true">'+x.e+'</div><div class="cb"><h3>'+esc(x.n)+'</h3><p>'+esc(x.d)+'</p><div class="price">'+rp(x.p)+' <span>/ '+x.u+'</span></div><div class="qty"><button data-m="'+x.id+'" aria-label="Kurangi">−</button><output>'+n+'</output><button data-a="'+x.id+'" aria-label="Tambah">+</button></div></div></div>'}).join("");
+  }
+  function sum(){
+    var t=0,c=0,lines=[];
+    P.forEach(function(x){var n=cart[x.id]||0;if(n){t+=n*x.p;c+=n;lines.push({x:x,n:n})}});
+    $("badge").textContent=c;
+    $("total").textContent=rp(t);
+    $("items").innerHTML=lines.length?lines.map(function(l){return '<div class="row"><span>'+esc(l.x.n)+' ('+l.x.u+') × '+l.n+'</span><span>'+rp(l.x.p*l.n)+'</span></div>'}).join(""):'<div class="empty">Keranjang masih kosong. Pilih produk di atas.</div>';
+    return {t:t,lines:lines};
+  }
+  function msg(r){
+    var m="Halo, saya ingin memesan:\n";
+    r.lines.forEach(function(l){m+="- "+l.x.n+" ("+l.x.u+") x "+l.n+" = "+rp(l.x.p*l.n)+"\n"});
+    m+="Total: "+rp(r.t)+" (belum termasuk ongkir)\n\nNama: "+$("nama").value.trim()+"\nHP: "+$("hp").value.trim()+"\nAlamat: "+$("alamat").value.trim();
+    if($("cat").value.trim())m+="\nCatatan: "+$("cat").value.trim();
+    return m;
+  }
+  function change(id,d){var n=Math.max(0,(cart[id]||0)+d);if(n)cart[id]=n;else delete cart[id];save();grid();sum()}
+  $("grid").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;if(b.dataset.a)change(+b.dataset.a,1);if(b.dataset.m)change(+b.dataset.m,-1)});
+  $("chips").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;cat=b.dataset.c;chips();grid()});
+  $("q").addEventListener("input",grid);
+  $("kirim").addEventListener("click",function(e){
+    var r=sum(),er="";
+    if(!r.lines.length)er="Pilih minimal satu produk dulu.";
+    else if(!$("nama").value.trim()||!$("hp").value.trim()||!$("alamat").value.trim())er="Nama, nomor HP, dan alamat wajib diisi.";
+    $("err").textContent=er;
+    if(er){e.preventDefault();return}
+    this.href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg(r));
+  });
+  chips();grid();sum();
+})();
+</script>
+</body>
+</html>
